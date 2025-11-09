@@ -1,18 +1,8 @@
-interface StudentConstructor {
-  firstName: string;
-  lastName: string;
-}
-
-interface StudentClassInterface {
-  workOnHomework(): string;
-  displayName(): string;
-}
-
-class StudentClass implements StudentClassInterface {
+class StudentClass {
   firstName: string;
   lastName: string;
 
-  constructor({ firstName, lastName }: StudentConstructor) {
+  constructor({ firstName, lastName }: { firstName: string; lastName: string }) {
     this.firstName = firstName;
     this.lastName = lastName;
   }
@@ -26,7 +16,16 @@ class StudentClass implements StudentClassInterface {
   }
 }
 
-// Example usage
-const student = new StudentClass({ firstName: "Yared", lastName: "Gebremariam" });
+interface StudentConstructor {
+  firstName: string;
+  lastName: string;
+}
+
+interface StudentClassInterface {
+  workOnHomework(): string;
+  displayName(): string;
+}
+
+const student: StudentClassInterface = new StudentClass({ firstName: "Yared", lastName: "Gebremariam" });
 console.log(student.displayName());
 console.log(student.workOnHomework());
