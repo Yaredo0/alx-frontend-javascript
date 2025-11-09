@@ -28,5 +28,5 @@ class StudentClass implements StudentClassInterface {
 
 // Example usage
 const student = new StudentClass({ firstName: "Yared", lastName: "Gebremariam" });
-console.log(student.displayName());      // Output: Yared
-console.log(student.workOnHomework());   // Output: Currently working
+console.log(student.displayName());
+console.log(student.workOnHomework());
