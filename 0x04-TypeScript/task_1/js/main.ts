@@ -22,12 +22,12 @@ const director1: Director = {
 console.log(director1);
 
 interface printTeacherFunction {
-  ({ firstName, lastName }: { firstName: string; lastName: string }): string;
+  (firstName: string, lastName: string): string;
 }
 
-const printTeacher: printTeacherFunction = function ({ firstName, lastName }: { firstName: string; lastName: string }): string {
+function printTeacher(firstName: string, lastName: string): string {
   return `${firstName}. ${lastName}`;
-};
+}
 
 // Example usage
-console.log(printTeacher({ firstName: "John", lastName: "Doe" }));
+console.log(printTeacher("John", "Doe"));
