@@ -29,5 +29,10 @@ function printTeacher(firstName: string, lastName: string): string {
   return `${firstName}. ${lastName}`;
 }
 
+
+function printTeacherFromObject({ firstName, lastName }: { firstName: string; lastName: string }): string {
+  return printTeacher(firstName, lastName);
+}
+
 // Example usage
-console.log(printTeacher("John", "Doe"));
+console.log(printTeacherFromObject({ firstName: "John", lastName: "Doe" }));
