@@ -1,16 +1,13 @@
-// Interface for constructor arguments
 interface StudentConstructor {
   firstName: string;
   lastName: string;
 }
 
-// Interface describing the class
 interface StudentClassInterface {
   workOnHomework(): string;
   displayName(): string;
 }
 
-// Class implementation
 class StudentClass implements StudentClassInterface {
   firstName: string;
   lastName: string;
