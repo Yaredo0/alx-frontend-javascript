@@ -1,0 +1,17 @@
+{
+  "name": "task_0",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "tsc",
+    "start": "webpack",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "typescript": "^5.2.2",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4",
+    "ts-loader": "^9.5.0",
+    "jest": "^24.9.0",
+    "@types/jest": "^24.0.25"
+  }
+}
