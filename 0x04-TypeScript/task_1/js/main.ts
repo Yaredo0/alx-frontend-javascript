@@ -2,17 +2,21 @@ interface Teacher {
   readonly firstName: string;
   readonly lastName: string;
   fullTimeEmployee: boolean;
-  yearsOfExperience?: number;
   location: string;
+  yearsOfExperience?: number;
   [key: string]: any;
 }
 
-const teacher3: Teacher = {
+interface Director extends Teacher {
+  numberOfReports: number;
+}
+
+const director1: Director = {
   firstName: 'John',
-  fullTimeEmployee: false,
   lastName: 'Doe',
   location: 'London',
-  contract: false,
+  fullTimeEmployee: true,
+  numberOfReports: 17,
 };
 
-console.log(teacher3);
+console.log(director1);
